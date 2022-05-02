@@ -1,0 +1,11 @@
+{
+  "materials": {
+    "rusty_metal": {
+      "albedoMap": "materials/rusty_metal/diff.png",
+      "metallicMap": "materials/rusty_metal/rusty_metal_02_spec_2k.png",
+      "roughnessMap": "materials/rusty_metal/roughness.png",
+      "normalMap": "materials/rusty_metal/normal.png",
+      "aoMap": "materials/rusty_metal/ao.png"
+    }
+  }
+}

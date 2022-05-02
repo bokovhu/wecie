@@ -1,0 +1,36 @@
+{
+  "materials": {
+    "bricks1": {
+      "albedoMap": "materials/bricks/Bricks31_col.jpg",
+      "metallic": 0.0,
+      "roughnessMap": "materials/bricks/Bricks31_rgh.jpg",
+      "normalMap": "materials/bricks/Bricks31_nrm.jpg",
+      "aoMap": "materials/bricks/Bricks31_AO.jpg"
+    },
+    "carpet1": {
+      "albedoMap": "materials/carpet/Carpet10_col.jpg",
+      "metallic": 0.0,
+      "roughnessMap": "materials/carpet/Carpet10_rgh.jpg",
+      "normalMap": "materials/carpet/Carpet10_nrm.jpg",
+      "aoMap": "materials/carpet/Carpet10_AO.jpg"
+    },
+    "metal": {
+      "albedoMap": "materials/metal/Metal03_col.jpg",
+      "metallicMap": "materials/metal/Metal03_met.jpg",
+      "roughnessMap": "materials/metal/Metal03_rgh.jpg",
+      "normalMap": "materials/metal/Metal03_nrm.jpg"
+    },
+    "tiles1": {
+      "albedoMap": "materials/tiles1/Tiles22_col.jpg",
+      "metallic": 0.0,
+      "roughnessMap": "materials/tiles1/Tiles22_rgh.jpg",
+      "normalMap": "materials/tiles1/Tiles22_nrm.jpg"
+    },
+    "tiles2": {
+      "albedoMap": "materials/tiles2/Tiles56_col.jpg",
+      "metallicMap": "materials/tiles2/Tiles56_met.jpg",
+      "roughnessMap": "materials/tiles2/Tiles56_rgh.jpg",
+      "normalMap": "materials/tiles2/Tiles56_nrm.jpg"
+    }
+  }
+}

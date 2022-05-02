@@ -1,0 +1,30 @@
+{
+  "materials": {
+    "floor": {
+      "albedoMap": "gold/albedo.png",
+      "metallicMap": "gold/metallic.png",
+      "roughnessMap": "gold/roughness.png",
+      "normalMap": "gold/normal.png"
+    },
+    "cone": {
+      "albedoMap": "rust/albedo.png",
+      "metallicMap": "rust/metallic.png",
+      "roughnessMap": "rust/roughness.png",
+      "normalMap": "rust/normal.png"
+    },
+    "monkey": {
+      "albedoMap": "plastic/albedo.png",
+      "metallicMap": "plastic/metallic.png",
+      "roughnessMap": "plastic/roughness.png",
+      "normalMap": "plastic/normal.png",
+      "aoMap": "plastic/ao.png"
+    },
+    "torus": {
+      "albedoMap": "rock/albedo.png",
+      "metallicMap": "rock/metallic.png",
+      "roughnessMap": "rock/roughness.png",
+      "normalMap": "rock/normal.png",
+      "aoMap": "rock/ao.png"
+    }
+  }
+}

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>hu.iit.bme</groupId>
+    <artifactId>we-call-it-engine</artifactId>
+    <version>0.0.1.Snapshot</version>
+    <modules>
+        <module>engine</module>
+        <module>demo</module>
+    </modules>
+
+    <packaging>pom</packaging>
+
+    <profiles>
+        <profile>
+            <id>linux64</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                    <arch>amd64</arch>
+                </os>
+            </activation>
+            <properties>
+                <lwjgl.natives>natives-linux</lwjgl.natives>
+                <engine.classifier>linux64</engine.classifier>
+            </properties>
+        </profile>
+        <profile>
+            <id>win64</id>
+            <activation>
+                <os>
+                    <family>windows</family>
+                    <arch>amd64</arch>
+                </os>
+            </activation>
+            <properties>
+                <lwjgl.natives>natives-windows</lwjgl.natives>
+                <engine.classifier>win64</engine.classifier>
+            </properties>
+        </profile>
+        <profile>
+            <id>win32</id>
+            <activation>
+                <os>
+                    <family>windows</family>
+                    <arch>x86</arch>
+                </os>
+            </activation>
+            <properties>
+                <lwjgl.natives>natives-windows-x86</lwjgl.natives>
+                <engine.classifier>win32</engine.classifier>
+            </properties>
+        </profile>
+        <profile>
+            <id>coloniergames-repository</id>
+            <repositories>
+                <repository>
+                    <id>coloniergames.archiva.internal</id>
+                    <name>ColonierGames Internal</name>
+                    <url>https://archiva.colonier.games/repository/internal</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>coloniergames.archiva.snapshots</id>
+                    <name>ColonierGames Snapshots</name>
+                    <url>https://archiva.colonier.games/repository/snapshots</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+
+            <distributionManagement>
+                <repository>
+                    <id>coloniergames.archiva.internal</id>
+                    <name>ColonierGames Internal</name>
+                    <url>https://archiva.colonier.games/repository/internal</url>
+                </repository>
+                <snapshotRepository>
+                    <id>coloniergames.archiva.snapshots</id>
+                    <name>ColonierGames Snapshots</name>
+                    <url>https://archiva.colonier.games/repository/snapshots</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+    </profiles>
+
+    <properties>
+
+        <version.maven.compiler>3.8.1</version.maven.compiler>
+        <version.maven.jar>3.1.2</version.maven.jar>
+        <version.maven.surefire>3.0.0-M3</version.maven.surefire>
+        <version.maven.source>3.1.0</version.maven.source>
+        <version.maven.shade>3.2.1</version.maven.shade>
+
+        <java.source>11</java.source>
+        <java.target>11</java.target>
+        <java.encoding>UTF-8</java.encoding>
+
+        <version.lwjgl>3.2.3</version.lwjgl>
+        <version.joml>1.9.17</version.joml>
+        <version.slf4j>1.7.28</version.slf4j>
+        <version.jackson>2.10.0</version.jackson>
+        <version.commons-io>2.6</version.commons-io>
+
+        <version.test.junit>5.5.2</version.test.junit>
+
+    </properties>
+
+    <build>
+
+        <pluginManagement>
+
+            <plugins>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${version.maven.compiler}</version>
+                    <configuration>
+                        <source>${java.source}</source>
+                        <target>${java.target}</target>
+                        <encoding>${java.encoding}</encoding>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${version.maven.jar}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${version.maven.surefire}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${version.maven.source}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-shade-plugin</artifactId>
+                    <version>${version.maven.shade}</version>
+                </plugin>
+
+            </plugins>
+
+        </pluginManagement>
+
+    </build>
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${version.test.junit}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${version.test.junit}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${version.slf4j}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>${version.slf4j}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+</project>

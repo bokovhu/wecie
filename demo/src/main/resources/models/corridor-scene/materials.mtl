@@ -1,0 +1,69 @@
+# Blender MTL File: 'scene.blend'
+# Material Count: 5
+
+newmtl bricks1
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump materials\\[2K]Bricks31\\Bricks31_nrm.jpg
+map_Kd materials\\[2K]Bricks31\\Bricks31_col.jpg
+map_Ns materials\\[2K]Bricks31\\Bricks31_rgh.jpg
+
+newmtl carpet1
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump materials\\[2K]Carpet10\\Carpet10_nrm.jpg
+map_Kd materials\\[2K]Carpet10\\Carpet10_col.jpg
+map_Ns materials\\[2K]Carpet10\\Carpet10_rgh.jpg
+
+newmtl metal
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump materials\\[2K]Metal03\\Metal03_nrm.jpg
+map_Kd materials\\[2K]Metal03\\Metal03_col.jpg
+map_Ns materials\\[2K]Metal03\\Metal03_rgh.jpg
+refl materials\\[2K]Metal03\\Metal03_met.jpg
+
+newmtl tiles1
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump materials\\[2K]Tiles22\\Tiles22_nrm.jpg
+map_Kd materials\\[2K]Tiles22\\Tiles22_col.jpg
+map_Ns materials\\[2K]Tiles22\\Tiles22_rgh.jpg
+
+newmtl tiles2
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump materials\\[2K]Tiles56\\Tiles56_nrm.jpg
+map_Kd materials\\[2K]Tiles56\\Tiles56_col.jpg
+map_Ns materials\\[2K]Tiles56\\Tiles56_rgh.jpg
+refl materials\\[2K]Tiles56\\Tiles56_met.jpg
